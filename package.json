@@ -1,0 +1,17 @@
+{
+  "name": "cucumber-puppeteer-example",
+  "description": "Example project on how to use cucumber with puppeteer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:spirosikmd/cucumber-puppeteer-example.git",
+  "author": "Spyros Ioakeimidis <spyrosikmd@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "cucumber": "^4.0.0",
+    "puppeteer": "^1.1.0"
+  },
+  "scripts": {
+    "test": "cucumber-js"
+  }
+}
