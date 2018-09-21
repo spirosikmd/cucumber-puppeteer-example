@@ -8,7 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.1.2",
-    "cucumber": "^4.0.0",
+    "cucumber": "^5.0.1",
     "puppeteer": "^1.1.0"
   },
   "scripts": {
