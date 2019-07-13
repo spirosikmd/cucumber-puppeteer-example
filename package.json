@@ -9,9 +9,11 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^5.0.0",
     "puppeteer": "^1.18.1"
   },
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js -f json:cucumber_report.json",
+    "test:report": "node report.js"
   }
 }
