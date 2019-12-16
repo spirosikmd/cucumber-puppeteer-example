@@ -163,10 +163,10 @@ cucumber-expressions@^6.0.0:
   dependencies:
     becke-ch--regex--s0-0-v1--base--pl--lib "^1.2.0"
 
-cucumber-html-reporter@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/cucumber-html-reporter/-/cucumber-html-reporter-5.0.2.tgz#57829c97e12d66218fb0249f1bdb6a0893267009"
-  integrity sha512-SjdFWWuroILYxGSxvgK03r8ImoFTj33kY0QpdEALaCVm0mZ628MGUR+W2Bjvm4sqFw+feICb53FOFdRlqOYIqQ==
+cucumber-html-reporter@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/cucumber-html-reporter/-/cucumber-html-reporter-5.1.0.tgz#a92846220c7f0d33b4bf0d545c0c775e64f9bb77"
+  integrity sha512-cqvRaAL/RIorNu8LIPWZQiXyMcaEM74navfHSyc1VH9UgIH7XiJ/ehGBHyV0tBvzJrWPZhbjibe0B55uDYMP/w==
   dependencies:
     chalk "^2.4.2"
     find "^0.3.0"
@@ -176,6 +176,7 @@ cucumber-html-reporter@^5.0.2:
     lodash "^4.17.11"
     node-emoji "^1.10.0"
     open "^6.4.0"
+    uuid "^3.3.3"
 
 cucumber-tag-expressions@^1.1.1:
   version "1.1.1"
@@ -783,6 +784,11 @@ util-arity@^1.0.2:
 util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
+
+uuid@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
+  integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==
 
 verror@^1.9.0:
   version "1.10.0"
