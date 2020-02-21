@@ -21,6 +21,5 @@ When("I click enter", async function() {
 });
 
 Then("I expect to see the todo in the list", async function() {
-  throw new Error('Forced error');
   return await this.checkTodoIsInList();
 });
