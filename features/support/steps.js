@@ -1,4 +1,4 @@
-const { Given, When, Then, After, Before } = require("cucumber");
+import { After, Before, Given, Then, When } from "cucumber";
 
 Before(async function(testCase) {
   return await this.openTodoPage();
