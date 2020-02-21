@@ -16,7 +16,7 @@
     "puppeteer": "^2.1.1"
   },
   "scripts": {
-    "test": "cucumber-js --require-module @babel/register -f json:cucumber_report.json",
+    "test": "cucumber-js --require-module @babel/register --format json:cucumber_report.json",
     "test:report": "node report.js"
   }
 }
