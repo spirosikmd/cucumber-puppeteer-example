@@ -1,8 +1,10 @@
 import { expect } from "chai";
-import { setWorldConstructor } from "cucumber";
+import { setWorldConstructor, setDefaultTimeout } from "cucumber";
 import puppeteer from "puppeteer";
 
 const PAGE = "http://todomvc.com/examples/react/#/";
+
+setDefaultTimeout(30 * 1000);
 
 class TodoWorld {
   constructor() {
