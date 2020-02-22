@@ -1,3 +1,5 @@
 node_modules
 cucumber_report.html
 cucumber_report.json
+yarn.lock
+package-lock.json

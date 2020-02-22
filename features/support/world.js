@@ -1,6 +1,6 @@
-const { setWorldConstructor } = require("cucumber");
-const { expect } = require("chai");
-const puppeteer = require("puppeteer");
+import { expect } from "chai";
+import { setWorldConstructor } from "cucumber";
+import puppeteer from "puppeteer";
 
 const PAGE = "http://todomvc.com/examples/react/#/";
 
