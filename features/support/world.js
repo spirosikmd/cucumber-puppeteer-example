@@ -3,6 +3,7 @@ import { setWorldConstructor, setDefaultTimeout } from "cucumber";
 import puppeteer from "puppeteer";
 
 const PAGE = "http://todomvc.com/examples/react/#/";
+const HEADLESS = process.env.HEADLESS !== "false";
 
 setDefaultTimeout(30 * 1000);
 
@@ -12,7 +13,7 @@ class TodoWorld {
   }
 
   async openTodoPage() {
-    this.browser = await puppeteer.launch();
+    this.browser = await puppeteer.launch({ headless: HEADLESS });
     this.page = await this.browser.newPage();
     await this.page.goto(PAGE);
   }
