@@ -8,18 +8,24 @@ After(async function() {
   return await this.closeTodoPage();
 });
 
-Given("I have a todo {string}", function(todo) {
-  this.setTodo(todo);
+Given("I have the todo list", async function(dataTable) {
+  return await Promise.all(
+    dataTable.rows().map(async ([todo]) => {
+      await this.writeTodo(todo);
+    })
+  );
 });
 
-When("I write the todo in the input field", async function() {
-  return await this.writeTodo();
+When(/^I add the todo item "(.*)" to the list$/, async function(todo) {
+  return await this.writeTodo(todo);
 });
 
-When("I click enter", async function() {
-  return await this.submit();
+Then(/^I expect the todo list to have (\d+) items?$/, async function(number) {
+  return await this.checkNumberOfTodos(number);
 });
 
-Then("I expect to see the todo in the list", async function() {
-  return await this.checkTodoIsInList();
+Then(/^I expect to see the todo item "(.*)" in the todo list$/, async function(
+  todo
+) {
+  return await this.checkTodoIsInList(todo);
 });
