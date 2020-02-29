@@ -8,6 +8,8 @@ const INPUT_SELECTOR = "section input";
 const TODO_ITEMS_SELECTOR = "ul.todo-list li";
 const todoItemSelector = index => `ul.todo-list li:nth-child(${index})`;
 const todoItemLabelSelector = index => `${todoItemSelector(index)} label`;
+const deleteButtonSelector = index => `${todoItemSelector(index)} button`;
+
 const HEADLESS = process.env.HEADLESS !== "false";
 
 setDefaultTimeout(30 * 1000);
@@ -34,11 +36,17 @@ class TodoWorld {
     expect(todoItemCount).to.eql(parseInt(number));
   }
 
-  async checkTodoIsInList(todo) {
-    const foundTodo = await this.page.$eval(todoItemLabelSelector(2), el =>
-      el.textContent.trim()
+  async checkTodoIsInList(todoIndex, todo) {
+    const foundTodo = await this.page.$eval(
+      todoItemLabelSelector(todoIndex),
+      el => el.textContent.trim()
     );
     expect(foundTodo).to.eql(todo);
+  }
+
+  async deleteTodo(todoIndex) {
+    await this.page.hover(todoItemSelector(todoIndex));
+    await this.page.click(deleteButtonSelector(todoIndex));
   }
 
   async closeTodoPage() {
